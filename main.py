@@ -19,4 +19,17 @@ class Diploma:
     def method(self):
         print("about Aspirant")
 
+class Aspirant(Student, Diploma):
+    def pr(self):
+        self.method()
+        print(f"{self.name} "
+              f"{self.surname} "
+              f"age = {self.age} "
+              f"marks = {self.gradebook} "
+              f"sum_marks = {self.gradebookplus}")
+        self.diploma()
+
+Aspirant1 = Aspirant()
+Aspirant1.pr()
+
 
